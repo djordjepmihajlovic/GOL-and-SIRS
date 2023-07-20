@@ -14,7 +14,7 @@ To run data finder (Wave position, Phase diagram, Immunity vs infection): run SI
 
 INFO ABOUT CODE & CHOICES MADE IN IMPLEMENTATION:
 
-For the game of life part of the checkpoint 3 different files consisting of 3 different classes,
+For the game of life 3 different files consisting of 3 different classes,
 the first file is used to initialize the lattice and has functions for the update rule, it also has a few
 other initializers such as beehive, glider etc to demonstrate their behaviour.
 The second file is an animation class used to utilize the update class, it also prompts the user 
