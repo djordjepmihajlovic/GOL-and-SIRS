@@ -14,7 +14,7 @@ To run data finder (Wave position, Phase diagram, Immunity vs infection): run SI
 
 INFO ABOUT CODE & CHOICES MADE IN IMPLEMENTATION:
 
-For the game of life part of the checkpoint I've created 3 different files consisting of 3 different classes,
+For the game of life part of the checkpoint 3 different files consisting of 3 different classes,
 the first file is used to initialize the lattice and has functions for the update rule, it also has a few
 other initializers such as beehive, glider etc to demonstrate their behaviour.
 The second file is an animation class used to utilize the update class, it also prompts the user 
@@ -22,7 +22,7 @@ for the required simulation. Finally there is the data class which again utilize
 simulation a number of times to determine the number of iterations required to reach equilibrium.
 
 Specifics on Histogram:
-In order to determine the number of iterations required to reach equilibrium I've created a function (activity)
+In order to determine the number of iterations required to reach equilibrium a function to calculate activity is implemented
 that analyzes the count of active sites of the lattice. Every 10 iterations a list of the 10 most recent counts 
 of active sites is compared in two ways:
 the average of the list is compared to the average of the previous 10
@@ -38,9 +38,12 @@ number is ~50 (the size of the lattice) hence to elimate this data I've removed 
 that is greater than 2 i.e. part of the glider is at [50][50] and another is [0][0] = difference between previous x,y and current
 x, y > 2.
 
-For the SIRS part of the checkpoint I've again created 3 different files with 3 classes.
+For the SIRS simulator 3 different files with 3 classes.
 The first two classes act similar to the Game of Life where one determines the intial set up and update rules,
 the second is a animation class to visualize the update rule with a set of presets to choose from.
 The third class is a data class to determine required data from the SIRS model with 3 functions:
 one function to determine the phase diagram, one to determine the area that waves occur and the other to determine behaviour 
 according to changing immunity.
+
+
+All code is run simply running the file either through terminal or any IDE and following the user prompts.
