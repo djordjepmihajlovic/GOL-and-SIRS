@@ -1,7 +1,5 @@
 # GOL-SIRS
 
-Checkpoint 2 for 10pt Modelling and Visualisation school of physics course @ the University of Edinburgh.
-
 Game of life &amp; the SIRS model
 
 Game Of Life.
