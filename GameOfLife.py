@@ -6,7 +6,7 @@ Created on Sat Jan 21 22:16:58 2023
 @author: djordjemihajlovic
 """
 
-from GameOfLifeUpdate import Simulate
+from GameOfLifeUpdate import Simulate  # Import updating class
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
@@ -15,7 +15,7 @@ class GameOfLife(object):  # Set up simple class to animate dependent on chosen 
     
     def __init__(self, N):
         
-        self.GOL = Simulate(N)
+        self.GOL = Simulate(N)  # Define simulation
         
         self.fig, self.ax = plt.subplots()        
         self.implot = self.ax.imshow(self.GOL.lattice, cmap = 'gray')
@@ -24,22 +24,22 @@ class GameOfLife(object):  # Set up simple class to animate dependent on chosen 
     def run(self):
 
         self.ani = animation.FuncAnimation(self.fig, self.animate,
-                                           interval=5, blit=True)
+                                           interval=20, blit=True)
         plt.show()
 
         
     def animate(self, frame): #This determines each frame of animation
         self.GOL.update()
         self.implot.set_data(self.GOL.lattice)
-        self.GOL.count() #want to compare previous GOL counts every 10
+        self.GOL.count()  # Counting active sites (was used as a debugger when calculating data)
 
         return self.implot,
     
          
-def main():
+def main():  # Main class to run animation after prompting user for type of simulation
     
     Sim = int(input("Simulation type, 0 for random, 1 for glider, 2 for blinker, 3 for beehive = "))
-    S = GameOfLife(100)
+    S = GameOfLife(50)
     if Sim == 1:
         S.GOL.glider()
         
@@ -49,8 +49,9 @@ def main():
     if Sim == 3:
         S.GOL.beehive()
         
-    
-   
+    if Sim == 4:
+        S.GOL.tester2()
+
     S.run()
 
     
